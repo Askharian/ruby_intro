@@ -181,7 +181,7 @@ class BasicsController < ApplicationController
     age = rand(50) + 18
     phrase4 = "years old. What am I doing with my life?"
 
-    @result = "Ugh, I spent #{money.to_s} dollars at the Taco Bell drive through yesterday. I'm #{age.to_s} years old. What am I doing with my life?"
+    @result = "#{phrase1} #{money.to_s} #{currency} #{phrase2} #{restaurant} #{phrase3} #{age.to_s} #{phrase4}"
     render "basics"
   end
 
@@ -193,8 +193,9 @@ class BasicsController < ApplicationController
 
     name = "Jane Doe"
 
-    @result = "replace this string with your answer"
+    @result = name.length
     render "basics"
+
   end
 
   def num_15
@@ -205,7 +206,7 @@ class BasicsController < ApplicationController
 
     name = "Jane Doe"
 
-    @result = "replace this string with your answer"
+    @result = name.gsub(/[e]/, '3')
     render "basics"
   end
 end
